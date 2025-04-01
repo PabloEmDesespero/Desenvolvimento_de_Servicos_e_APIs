@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="Teste">Olá Pessoal</div>
+    <button onclick="darBomdia()">APERTE</button>
+    <input id = "Teste2" type = "text"><button onclick = "add()">adicionar elemento</button>
+    
+    <ol id = "lista"></ol>
+
+    <script>
+        var minhaDiv = document.getElementById("Teste")
+        var lista = document.getElementById("lista")
+        var txtValor = document.getElementById("Teste2")
+        
+        function darBomdia(){
+            minhaDiv.innerHTML += "<br><i>Bom dia!</i>"
+            minhaDiv.style.width = "200px"
+            minhaDiv.style.background = "green"
+            minhaDiv.style.color = "#fff" // rgb(255, 255, 255)
+        }
+
+        var minhaDiv = document.getElementById("Teste")
+
+        function add() {
+            var valor = txtValor.value
+            if ( valor != "" ) {
+             lista.innerHTML += "<li>"+valor+"</li>"
+            }
+        }
+    
+    </script>
+
+</body>
+</html>
