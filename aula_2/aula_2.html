@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda_Aula</title>
+    <script src= "jquery 3.7.1.min.js>"</script>
+</head>
+<body>
+    <!--
+    // innerHTML -> escrever um elemento html
+    // document.write() -> escrevendo no html
+    // window.alert() -> 
+    -->
+
+    <script>
+        document.write("Bom dia!")
+        console.log("log feito")
+
+        pessoa = { // Declaração de objeto
+            nome: "Maria",
+            idade: "25",
+            altura: 1.55, 
+            formacoes: ["Técnico", "Graduação", "Mestrado"],
+            casado: true ,
+            conjuge: { nome: "José", idade: 26 }, //Usando objeto com o mesmo valor de um atributo
+            filhos: [
+                { nome: "Júlia", idade: 5 } ,
+                { nome: "Enzo", idade: 3}
+            ], // Vetor contendo 2 itens
+            endereco: null ,
+            getInfos: function(){
+                return this.nome + " - Idade: " + this.idade 
+            }
+        }
+
+        console.log(pessoa) // para limpar o console (http) -> clear()
+        var txt = "<br></br>"
+        txt += pessoa.getInfos() + "<br>Altura: " + pessoa.altura + "</br>"
+        txt += "<br>Formações: " + pessoa.formacoes + "</br>"
+        
+        
+        if (pessoa.casado) 
+            txt += "<br>Cônjuge: " + pessoa.conjuge.nome + "</br>" //Acessar um dado dentro de um objeto
+        
+        txt += "<br>Filhos: " 
+        pessoa.filhos.forEach( filho =>{ //o forEach serve para exibir mais de 1 dado dentro do mesmo objeto
+            txt += "<br> " + filho.nome + " Idade: " + filho.idade
+        })        
+      
+            document.write(txt)
+            
+        
+
+
+        
+        
+    </script>
+
+    
+</body>
+</html>
